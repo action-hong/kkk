@@ -1,11 +1,5 @@
 ## @container, 容器查询
 
-```
-container: container-type container-name
-```
-
-当然也可以分开声明:
-
 ```css
 container-type: inline-size
 container-type: size

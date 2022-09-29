@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>container</title>
+  <style>
+    .aside,
+    .container {
+      height: 100px;
+      width: 200px;
+      border: 1px solid black;
+      /* container-type: inline-size; */
+      container-type: size;
+      resize: both;
+      overflow:auto;
+    }
+
+    .aside {
+      container-name: aside;
+    }
+
+    p {
+      color: skyblue;
+    }
+
+    @container (max-height: 300px) {
+      p {
+        color: red;
+      }
+    }
+
+    /* 只对aside起作用 */
+    @container aside (max-width: 300px) {
+      p {
+        background: yellow;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <p>
+      hello world
+    </p>
+  </div>
+  <div class="aside">
+    <p>
+      aside
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+p {
+  color: yellow;
+}
+
+@layer base {
+  div#app p {
+    color: red;
+    font-size: 40px;
+  }
+
+}
+
+@layer utilities {
+  div p {
+    color: skyblue;
+  }
+
+  span {
+    color: skyblue;
+  }
+}
+
+@layer base {
+
+  div#app span {
+    color: red;
+  }
+}
